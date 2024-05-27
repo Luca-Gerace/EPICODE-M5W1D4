@@ -1,14 +1,17 @@
-import React from "react";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
-function Card() {
-  const [count, setCount] = React.useState(0);
-
+function MyCard(prop) {
   return (
-    <>
-      <p>Numero di click: {count}</p>
-      <button onClick={() => setCount(count + 2)}>Cliccami...</button>
-    </>
+    <Card>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>{prop.title}</Card.Title>
+        <Card.Text>{prop.text}</Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
   );
 }
 
-export default Card;
+export default MyCard;
